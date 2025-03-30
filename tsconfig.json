@@ -1,0 +1,50 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "useDefineForClassFields": true,
+        "lib": [
+            "ESNext",
+            "DOM",
+            "DOM.Iterable"
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "./resources/js/*"
+            ],
+            "ziggy-js": [
+                "./vendor/tightenco/ziggy"
+            ]
+        },
+        "types": [
+            "vite/client",
+            "./resources/js/types"
+        ],
+        "outDir": "./public/build/assets",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "sourceMap": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "preserveSymlinks": true,
+        "vueCompilerOptions": {
+            "skipTemplateCodegen": true
+        },
+        "strict": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "resources/js/**/*.ts",
+        "resources/js/**/*.d.ts",
+        "resources/js/**/*.tsx",
+        "resources/js/**/*.vue"
+    ],
+    "exclude": [
+        "node_modules",
+        "public"
+    ]
+}

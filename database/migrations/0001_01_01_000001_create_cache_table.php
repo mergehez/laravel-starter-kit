@@ -1,23 +1,23 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use App\Utils\ArgBlueprint;
+use App\Utils\ArgMigration;
+use App\Utils\ArgSchema;
 
-return new class extends Migration
+return new class extends ArgMigration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('cache', function (Blueprint $table) {
+        ArgSchema::create('cache', function (ArgBlueprint $table) {
             $table->string('key')->primary();
             $table->mediumText('value');
             $table->integer('expiration');
         });
 
-        Schema::create('cache_locks', function (Blueprint $table) {
+        ArgSchema::create('cache_locks', function (ArgBlueprint $table) {
             $table->string('key')->primary();
             $table->string('owner');
             $table->integer('expiration');
@@ -29,7 +29,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cache');
-        Schema::dropIfExists('cache_locks');
+        ArgSchema::dropIfExists('cache');
+        ArgSchema::dropIfExists('cache_locks');
     }
 };

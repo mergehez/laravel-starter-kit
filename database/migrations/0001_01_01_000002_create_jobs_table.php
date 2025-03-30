@@ -1,17 +1,17 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use App\Utils\ArgBlueprint;
+use App\Utils\ArgMigration;
+use App\Utils\ArgSchema;
 
-return new class extends Migration
+return new class extends ArgMigration
 {
     /**
      * Run the migrations.
      */
     public function up(): void
     {
-        Schema::create('jobs', function (Blueprint $table) {
+        ArgSchema::create('jobs', function (ArgBlueprint $table) {
             $table->id();
             $table->string('queue')->index();
             $table->longText('payload');
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->unsignedInteger('created_at');
         });
 
-        Schema::create('job_batches', function (Blueprint $table) {
+        ArgSchema::create('job_batches', function (ArgBlueprint $table) {
             $table->string('id')->primary();
             $table->string('name');
             $table->integer('total_jobs');
@@ -34,7 +34,7 @@ return new class extends Migration
             $table->integer('finished_at')->nullable();
         });
 
-        Schema::create('failed_jobs', function (Blueprint $table) {
+        ArgSchema::create('failed_jobs', function (ArgBlueprint $table) {
             $table->id();
             $table->string('uuid')->unique();
             $table->text('connection');
@@ -50,8 +50,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('jobs');
-        Schema::dropIfExists('job_batches');
-        Schema::dropIfExists('failed_jobs');
+        ArgSchema::dropIfExists('jobs');
+        ArgSchema::dropIfExists('job_batches');
+        ArgSchema::dropIfExists('failed_jobs');
     }
 };
