@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {ref} from 'vue';
-import '../../../../css/ckeditor.scss';
+import '../../../../css/ckeditor.css';
 import {EditorConfig} from "@ckeditor/ckeditor5-core/src/editor/editorconfig";
 import CkEditorVueConverter from './CkEditorVueConverter.vue'
 import {ClassicEditor, Editor} from 'ckeditor5';

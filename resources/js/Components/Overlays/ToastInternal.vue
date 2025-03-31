@@ -71,7 +71,7 @@ defineExpose({
     >
         <div class="pb-1">
             <div class="flex items-start gap-3">
-                <div v-if="opts.icon" class="flex-shrink-0 pt-2.5">
+                <div v-if="opts.icon" class="shrink-0 pt-2.5">
                     <Icon :icon="opts.icon" class="text-lg"/>
                 </div>
                 <div class="w-0 flex-1 pt-1.5">

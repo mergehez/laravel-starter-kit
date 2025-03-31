@@ -17,8 +17,8 @@ const globalSearch = useGlobalSearch();
 </script>
 
 <template>
-    <!--<nav class="w-full z-50 shadow dark:shadow-stone-800 relative bg-x0" id="nav">-->
-    <nav class="w-full shadow-sm dark:shadow-x4 relative" id="nav">
+    <!--<nav class="w-full z-50 shadow-sm dark:shadow-stone-800 relative bg-x0" id="nav">-->
+    <nav class="w-full shadow-xs dark:shadow-x4 relative" id="nav">
         <!-- Primary Navigation Menu -->
         <div class="container relative mx-auto md:px-12">
             <div class="flex py-3 relative max-md:pb-3 items-center pl-2">
@@ -55,7 +55,7 @@ const globalSearch = useGlobalSearch();
 
                 <SwipingRightMenuButton :menu="menu" />
             </div>
-            <div class="flex-grow flex w-full">
+            <div class="grow-1 flex w-full">
                 <!-- Navigation Links -->
                 <div class="hidden space-x-4 -my-px md:flex w-full mb-2">
                     <template v-for="mi in menu.items">

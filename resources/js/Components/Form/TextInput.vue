@@ -28,7 +28,7 @@ defineExpose({focus: () => input.value?.focus()});
         :is="tag ?? 'input'"
         ref="input"
         :class="twMerge(
-            'text-sm bg-x1 disabled:bg-x2 dark:text-white border border-x4 focus:outline-none focus-visible:ring-2 focus:border-x4 font-normal rounded-md shadow-sm px-3 py-1.5 placeholder:text-gray-400',
+            'text-sm bg-x1 disabled:bg-x2 dark:text-white border border-x4 outline-x8 font-normal rounded-md shadow-xs px-3 py-1.5 placeholder:text-gray-400',
             $attrs.class as string
             )"
         :value="modelValue"

@@ -80,7 +80,7 @@ const isCurrentRoute = (m: { name: string, route: string, icon?: string }) => {
     <LayoutBase>
         <div class="h-screen flex flex-col bg-x2 relative overflow-y-auto">
             <!--<div class="w-screen h-screen flex flex-col bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-gray-100">-->
-            <nav id="nav" class="flex px-5 py-2 bg-x0 items-center gap-2 shadow dark:shadow-stone-800">
+            <nav id="nav" class="flex px-5 py-2 bg-x0 items-center gap-2 shadow-sm dark:shadow-stone-800">
                 <Button
                     severity="raised"
                     @click="changeMenuMode"
@@ -90,7 +90,7 @@ const isCurrentRoute = (m: { name: string, route: string, icon?: string }) => {
                 <slot name="panel-title">
                     <div class="flex items-center gap-1 text-indigo-800 font-bold pr-4 border-r border-x5 pl-1">
                         <span class="icon icon-mdi--settings text-lg"></span>
-                        <Link class="rounded transition-colors duration-300" :href="route(`panel.home`)">Panel</Link>
+                        <Link class="rounded-sm transition-colors duration-300" :href="route(`panel.home`)">Panel</Link>
                     </div>
                 </slot>
                 <Button

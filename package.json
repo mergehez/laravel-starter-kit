@@ -7,27 +7,22 @@
     },
     "devDependencies": {
         "@fontsource/roboto": "^5.2.5",
-        "@iconify/json": "^2.2.321",
+        "@iconify/json": "^2.2.322",
         "@inertiajs/vue3": "^2.0.5",
-        "@tailwindcss/typography": "^0.5.16",
         "@tailwindcss/vite": "^4.0.17",
         "@types/node": "^22.13.14",
         "@vitejs/plugin-vue": "^5.2.3",
-        "autoprefixer": "^10.4.21",
         "concurrently": "^9.1.2",
         "laravel-vite-plugin": "^1.2.0",
-        "postcss": "^8.5.3",
-        "sass": "^1.86.0",
-        "tailwindcss": "^3.4.17",
+        "tailwindcss": "^4.0.17",
         "typescript": "^5.8.2",
-        "vite": "^6.2.3",
+        "vite": "^6.2.4",
         "vue": "^3.5.13",
         "vue-tsc": "^2.2.8",
         "ziggy-js": "^2.5.2"
     },
     "dependencies": {
         "@ckeditor/ckeditor5-theme-lark": "^44.3.0",
-        "@ckeditor/ckeditor5-vue": "^7.3.0",
         "@floating-ui/vue": "^1.1.6",
         "@formkit/auto-animate": "^0.8.2",
         "@vueuse/components": "^13.0.0",
@@ -36,7 +31,6 @@
         "dayjs": "^1.11.13",
         "pinia": "^3.0.1",
         "tailwind-merge": "^3.0.2",
-        "tailwindcss-animate": "^1.0.7",
         "vue-advanced-cropper": "^2.8.9"
     }
 }

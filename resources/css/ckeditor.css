@@ -1,0 +1,387 @@
+@reference "./app.css";
+
+@import "./ckeditor5-editor.css";
+
+:root{
+  --ck-color-base-foreground: var(--color-gray-50);
+  --ck-color-base-background: var(--color-white);
+  --ck-color-base-border: var(--color-gray-300);
+  --ck-color-base-action: var(--color-green-700);
+  --ck-color-base-focus: var(--color-blue-400);
+  --ck-color-base-text: var(--color-gray-800);
+  --ck-color-base-active: var(--color-blue-500);
+  --ck-color-base-active-focus: var(--color-blue-600);
+  --ck-color-base-error: var(--color-red-600);
+
+  /* --ck-color-focus-border-coordinates: 218, 81.8%, 56.9%; /* HSL coordinates are not directly representable by a single theme() color */
+--ck-color-focus-border: var(--color-blue-500);
+  --ck-color-focus-outer-shadow: var(--color-blue-100);
+  --ck-color-focus-disabled-shadow: color-mix(in oklab, var(--color-blue-300) 30%, transparent);
+  --ck-color-focus-error-shadow: color-mix(in oklab, var(--color-red-500) 30%, transparent);
+  --ck-color-text: var(--ck-color-base-text);
+  --ck-color-shadow-drop: color-mix(in oklab, var(--color-black) 15%, transparent);
+  --ck-color-shadow-drop-active: color-mix(in oklab, var(--color-black) 20%, transparent);
+  --ck-color-shadow-inner: color-mix(in oklab, var(--color-black) 10%, transparent);
+
+  --ck-color-button-default-background: var(--color-transparent);
+  --ck-color-button-default-hover-background: var(--color-gray-100);
+  --ck-color-button-default-active-background: var(--color-gray-100);
+  --ck-color-button-default-disabled-background: var(--color-transparent);
+
+  --ck-color-button-on-background: var(--color-blue-50);
+  --ck-color-button-on-hover-background: var(--color-blue-100);
+  --ck-color-button-on-active-background: var(--color-blue-100);
+  --ck-color-button-on-disabled-background: var(--color-gray-100);
+  --ck-color-button-on-color: var(--color-blue-500);
+
+  --ck-color-button-action-background: var(--ck-color-base-action);
+  --ck-color-button-action-hover-background: var(--color-green-800);
+  --ck-color-button-action-active-background: var(--color-green-800);
+  --ck-color-button-action-disabled-background: var(--color-green-500);
+  --ck-color-button-action-text: var(--ck-color-base-background);
+
+  --ck-color-button-save: var(--color-green-700);
+  --ck-color-button-cancel: var(--color-red-600);
+
+  --ck-color-switch-button-off-background: var(--color-gray-500);
+  --ck-color-switch-button-off-hover-background: var(--color-gray-600);
+  --ck-color-switch-button-on-background: var(--ck-color-button-action-background);
+  --ck-color-switch-button-on-hover-background: var(--color-green-800);
+  --ck-color-switch-button-inner-background: var(--ck-color-base-background);
+  --ck-color-switch-button-inner-shadow: color-mix(in oklab, var(--color-black) 10%, transparent);
+  --ck-color-dropdown-panel-background: var(--ck-color-base-background);
+  --ck-color-dropdown-panel-border: var(--ck-color-base-border);
+  --ck-color-input-background: var(--ck-color-base-background);
+  --ck-color-input-border: var(--ck-color-base-border);
+  --ck-color-input-error-border: var(--ck-color-base-error);
+  --ck-color-input-text: var(--ck-color-base-text);
+  --ck-color-input-disabled-background: var(--color-gray-100);
+  --ck-color-input-disabled-border: var(--ck-color-base-border);
+  --ck-color-input-disabled-text: var(--color-gray-500);
+  --ck-color-list-background: var(--ck-color-base-background);
+  --ck-color-list-button-hover-background: var(--ck-color-button-default-hover-background);
+  --ck-color-list-button-on-background: var(--ck-color-button-on-color);
+  --ck-color-list-button-on-background-focus: var(--ck-color-button-on-color);
+  --ck-color-list-button-on-text: var(--ck-color-base-background);
+  --ck-color-panel-background: var(--ck-color-base-background);
+  --ck-color-panel-border: var(--ck-color-base-border);
+  --ck-color-toolbar-background: var(--ck-color-base-background);
+  --ck-color-toolbar-border: var(--ck-color-base-border);
+  --ck-color-tooltip-background: var(--ck-color-base-text);
+  --ck-color-tooltip-text: var(--ck-color-base-background);
+  --ck-color-engine-placeholder-text: var(--color-gray-600);
+  --ck-color-upload-bar-background: var(--ck-color-base-focus);
+  --ck-color-link-default: var(--color-blue-600); /* Approx #0000f0 */
+  --ck-color-link-selected-background: color-mix(in oklab, var(--color-blue-500) 10%, transparent); /* Approx rgba(31, 176, 255, 0.1) */
+  --ck-color-link-fake-selection: color-mix(in oklab, var(--color-blue-500) 30%, transparent); /* Approx rgba(31, 176, 255, 0.3) */
+  --ck-color-highlight-background: var(--color-yellow-300); /* #ffff00 is closer to yellow-300 */
+  --ck-color-light-red: var(--color-red-100);
+  --ck-focus-outer-shadow: var(--ck-focus-outer-shadow-geometry) var(--ck-color-focus-outer-shadow);
+  --ck-focus-disabled-outer-shadow: var(--ck-focus-outer-shadow-geometry) var(--ck-color-focus-disabled-shadow);
+  --ck-focus-error-outer-shadow: var(--ck-focus-outer-shadow-geometry) var(--ck-color-focus-error-shadow);
+  --ck-focus-ring: 1px solid var(--ck-color-focus-border);
+  --ck-accessibility-help-dialog-border-color: var(--color-gray-300);
+  --ck-accessibility-help-dialog-code-background-color: var(--color-gray-100); /* #ededed */
+  --ck-accessibility-help-dialog-kbd-shadow-color: var(--color-gray-500); /* #9c9c9c */
+  --ck-inner-shadow: 2px 2px 3px var(--ck-color-shadow-inner) inset;
+  --ck-drop-shadow: 0 1px 2px 1px var(--ck-color-shadow-drop);
+  --ck-drop-shadow-active: 0 3px 6px 1px var(--ck-color-shadow-drop-active);
+  --ck-switch-button-inner-hover-shadow: 0 0 0 5px var(--ck-color-switch-button-inner-shadow);
+  --ck-color-color-grid-check-icon: var(--color-blue-600); /* #166fd4 */
+  --ck-dialog-overlay-background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+  --ck-dialog-drop-shadow: 0px 0px 6px 2px color-mix(in oklab, var(--color-black) 15%, transparent);
+  --ck-color-dialog-background: var(--ck-color-base-background);
+  --ck-color-dialog-form-header-border: var(--ck-color-base-border);
+  --ck-color-split-button-hover-background: var(--color-gray-100); /* #ebebeb */
+  --ck-color-split-button-hover-border: var(--color-gray-400); /* #b3b3b3 */
+  --ck-color-editable-blur-selection: var(--color-gray-200); /* #d9d9d9 */
+  --ck-color-labeled-field-label-background: var(--ck-color-base-background);
+  --ck-balloon-arrow-drop-shadow: 0 2px 2px var(--ck-color-shadow-drop);
+  --ck-color-block-toolbar-button: var(--ck-color-text);
+  --ck-clipboard-drop-target-color: var(--ck-color-focus-border);
+  --ck-color-code-block-label-background: var(--color-gray-500); /* #757575 */
+  --ck-html-embed-source-disabled-background: var(--ck-color-base-foreground);
+  --ck-html-embed-source-disabled-color: var(--color-gray-500); /* #737373 */
+  --ck-color-image-upload-icon: var(--color-white);
+  --ck-color-image-upload-icon-background: var(--color-green-700);
+  --ck-color-upload-placeholder-loader: var(--color-gray-400); /* #b3b3b3 */
+  --ck-evaluation-badge-text-color: var(--color-gray-700); /* #4f4f4f */
+  --ck-evaluation-badge-background: var(--color-white);
+  --ck-evaluation-badge-border-color: var(--ck-color-focus-border);
+  --ck-color-resizer: var(--ck-color-focus-border);
+  --ck-color-resizer-tooltip-background: var(--color-gray-900); /* #262626 */
+  --ck-color-resizer-tooltip-text: var(--color-gray-100); /* #f2f2f2 */
+  --ck-color-media-embed-placeholder-url-text: var(--color-gray-500); /* #757575 */
+  --ck-color-media-embed-placeholder-url-text-hover: var(--ck-color-base-text);
+  --ck-color-mention-background: color-mix(in oklab, var(--color-pink-900) 10%, transparent); /* Approx rgba(153, 0, 48, 0.1) */
+  --ck-color-mention-text: var(--color-pink-900); /* #990030 */
+  --ck-color-restricted-editing-exception-background: color-mix(in oklab, var(--color-orange-400) 20%, transparent); /* Approx rgba(255, 169, 77, 0.2) */
+  --ck-color-restricted-editing-exception-hover-background: color-mix(in oklab, var(--color-orange-400) 35%, transparent); /* Approx rgba(255, 169, 77, 0.35) */
+  --ck-color-restricted-editing-exception-brackets: color-mix(in oklab, var(--color-orange-600) 40%, transparent); /* Approx rgba(204, 105, 0, 0.4) */
+  --ck-color-restricted-editing-selected-exception-background: color-mix(in oklab, var(--color-orange-400) 50%, transparent); /* Approx rgba(255, 169, 77, 0.5) */
+  --ck-color-restricted-editing-selected-exception-brackets: color-mix(in oklab, var(--color-orange-600) 60%, transparent); /* Approx rgba(204, 105, 0, 0.6) */
+  --ck-style-panel-button-label-background: var(--color-gray-100); /* #f0f0f0 */
+  --ck-style-panel-button-hover-label-background: var(--color-gray-100); /* #ebebeb */
+  --ck-style-panel-button-hover-border-color: var(--color-gray-400); /* #b3b3b3 */
+  --ck-color-selector-focused-cell-background: color-mix(in oklab, var(--color-blue-300) 30%, transparent); /* Approx rgba(158, 201, 250, 0.3) */
+  --ck-table-selected-cell-background: color-mix(in oklab, var(--color-blue-300) 30%, transparent); /* Approx rgba(158, 207, 250, 0.3) */
+  --ck-color-widget-blurred-border: var(--color-gray-300); /* #dedede is close to gray-300 */
+  --ck-color-widget-hover-border: var(--color-yellow-400); /* #ffc83d */
+  --ck-color-widget-editable-focus-background: var(--ck-color-base-background);
+  --ck-color-widget-drag-handler-icon-color: var(--ck-color-base-background);
+  --ck-color-widget-type-around-button-active: var(--ck-color-focus-border);
+  --ck-color-widget-type-around-button-hover: var(--ck-color-widget-hover-border);
+  --ck-color-widget-type-around-button-blurred-editable: var(--ck-color-widget-blurred-border);
+  --ck-color-widget-type-around-button-icon: var(--ck-color-base-background);
+  --ck-bookmark-icon-hover-fill-color: var(--ck-color-widget-hover-border);
+  --ck-bookmark-icon-selected-fill-color: var(--ck-color-focus-border);
+  --ck-image-processing-highlight-color: var(--color-gray-50); /* #f9fafa */
+  --ck-image-processing-background-color: var(--color-gray-200); /* #e3e5e8 */
+  --ck-highlight-marker-yellow: var(--color-yellow-300); /* #fdfd77 */
+  --ck-highlight-marker-green: var(--color-green-300); /* #62f962 */
+  --ck-highlight-marker-pink: var(--color-pink-300); /* #fc7899 */
+  --ck-highlight-marker-blue: var(--color-blue-300); /* #72ccfd */
+  --ck-highlight-pen-red: var(--color-red-600); /* #e71313 */
+  --ck-highlight-pen-green: var(--color-green-700); /* #128a00 */
+  --ck-color-image-caption-background: var(--color-gray-100); /* #f7f7f7 */
+  --ck-color-image-caption-text: var(--color-gray-800); /* #333333 */
+  --ck-color-image-caption-highlighted-background: var(--color-yellow-400); /* #ffdd00 */
+  --ck-color-minimap-tracker-background: var(--color-gray-500); /* HSL(208, 0%, 51%) -> #828282 */
+  --ck-color-minimap-iframe-outline: var(--color-gray-300); /* #bfbfbf */
+  --ck-color-minimap-iframe-shadow: var(--color-black); /* #000000 (assuming solid, opacity not specified) */
+  --ck-color-minimap-progress-background: var(--color-gray-600); /* #666666 */
+  --ck-show-blocks-border-color: var(--color-gray-500); /* #757575 */
+  --ck-color-selector-caption-background: var(--color-gray-100); /* #f7f7f7 */
+  --ck-color-selector-caption-text: var(--color-gray-800); /* #333333 */
+  --ck-color-selector-caption-highlighted-background: var(--color-yellow-400); /* #ffdd00 */
+  --ck-color-selector-column-resizer-hover: var(--ck-color-base-active);
+}
+
+:root {
+  --ck-color-base-foreground: var(--bg0);
+  --ck-color-base-background: var(--bg0);
+  --ck-color-base-border: var(--bg5);
+  --ck-color-base-action: rgb(83, 163, 54);
+  --ck-color-base-focus: rgb(108, 181, 249);
+  --ck-color-base-text: black;
+  --ck-color-base-active: rgb(41, 119, 255);
+  --ck-color-base-active-focus: rgb(13, 101, 255);
+  --ck-color-base-error: rgb(219, 55, 0);
+
+  /* -- Generic colors ------------------------------------------------------------------------ */
+
+  --ck-color-focus-border-coordinates: 218, 81.8%, 56.9%;
+  --ck-color-focus-border: var(--bg5); /* hsl(var(--ck-color-focus-border-coordinates)); */
+  --ck-color-focus-outer-shadow: var(--bg4);
+  --ck-color-focus-disabled-shadow: rgba(119, 186, 248, 0.3);
+  --ck-color-focus-error-shadow: rgba(255, 64, 31, 0.3);
+  --ck-color-text: var(--ck-color-base-text);
+  --ck-color-shadow-drop: rgba(0, 0, 0, 0.15);
+  --ck-color-shadow-drop-active: rgba(0, 0, 0, 0.2);
+  --ck-color-shadow-inner: rgba(0, 0, 0, 0.1);
+
+  --ck-color-button-default-hover-background: var(--bg5);
+  --ck-color-button-on-background: var(--bg5);
+  --ck-color-button-on-hover-background: var(--bg6);
+  --ck-color-button-default-active-background: var(--bg5);
+  --ck-color-split-button-hover-background: var(--bg5);
+  --ck-color-dropdown-panel-background: var(--bg1);
+  --ck-color-panel-background: var(--bg1);
+
+  --ck-color-widget-hover-border: var(--bg5);
+  --ck-color-selector-focused-cell-background: var(--bg2);
+  --ck-color-widget-drag-handler-icon-color: var(--bg-reverse);
+  --ck-color-widget-type-around-button-active: var(--bg6);
+}
+.dark{
+  --ck-color-base-text: #ddd;
+}
+
+.dark{
+  --ck-color-base-foreground: var(--color-gray-800); /* Was gray.50 */
+  /*//--ck-color-base-background: var(--color-gray-900); !* Was white *!*/
+  --ck-color-base-border: var(--color-gray-700); /* Was gray.300 */
+  --ck-color-base-action: var(--color-green-500); /* Was green.700 */
+  --ck-color-base-focus: var(--color-blue-500); /* Was blue.400 */
+  --ck-color-base-text: var(--color-gray-100); /* Was gray.800 */
+  --ck-color-base-active: var(--color-blue-400); /* Was blue.500 */
+  --ck-color-base-active-focus: var(--color-blue-300); /* Was blue.600 */
+  --ck-color-base-error: var(--color-red-500); /* Was red.600 */
+
+--ck-color-focus-border: var(--color-blue-400); /* Was blue.500 */
+  --ck-color-focus-outer-shadow: color-mix(in oklab, var(--color-blue-500) 20%, transparent); /* Was blue.100 - adjusted for dark */
+  --ck-color-focus-disabled-shadow: color-mix(in oklab, var(--color-blue-400) 30%, transparent); /* Was blue.300 / 0.3 - adjusted base */
+  --ck-color-focus-error-shadow: color-mix(in oklab, var(--color-red-600) 30%, transparent); /* Was red.500 / 0.3 - adjusted base */
+--ck-color-shadow-drop: color-mix(in oklab, var(--color-black) 25%, transparent); /* Was black / 0.15 - increased opacity */
+  --ck-color-shadow-drop-active: color-mix(in oklab, var(--color-black) 30%, transparent); /* Was black / 0.2 - increased opacity */
+  --ck-color-shadow-inner: color-mix(in oklab, var(--color-black) 20%, transparent); /* Was black / 0.1 - increased opacity */
+
+  --ck-color-button-default-background: var(--color-transparent); /* Was transparent */
+  --ck-color-button-default-hover-background: var(--color-gray-700); /* Was gray.100 */
+  --ck-color-button-default-active-background: var(--color-gray-600); /* Was gray.100 */
+  --ck-color-button-default-disabled-background: var(--color-transparent); /* Was transparent */
+
+  --ck-color-button-on-background: var(--color-gray-700); /* Was blue.50 */
+  --ck-color-button-on-hover-background: var(--color-gray-600); /* Was blue.100 */
+  --ck-color-button-on-active-background: var(--color-gray-600); /* Was blue.100 */
+  --ck-color-button-on-disabled-background: var(--color-gray-800); /* Was gray.100 */
+  --ck-color-button-on-color: var(--color-blue-300); /* Was blue.500 */
+
+--ck-color-button-action-hover-background: var(--color-green-400); /* Was green.800 */
+  --ck-color-button-action-active-background: var(--color-green-300); /* Was green.800 */
+  --ck-color-button-action-disabled-background: var(--color-green-800); /* Was green.500 */
+
+--ck-color-button-save: var(--color-green-500); /* Was green.700 */
+  --ck-color-button-cancel: var(--color-red-500); /* Was red.600 */
+
+  --ck-color-switch-button-off-background: var(--color-gray-600); /* Was gray.500 */
+  --ck-color-switch-button-off-hover-background: var(--color-gray-500); /* Was gray.600 */
+--ck-color-switch-button-on-hover-background: var(--color-green-400); /* Was green.800 */
+--ck-color-switch-button-inner-shadow: color-mix(in oklab, var(--color-black) 20%, transparent); /* Was black / 0.1 */
+  --ck-color-input-disabled-background: var(--color-gray-800); /* Was gray.100 */
+--ck-color-input-disabled-text: var(--color-gray-500); /* Was gray.500 */
+  --ck-color-engine-placeholder-text: var(--color-gray-500); /* Was gray.600 */
+--ck-color-link-default: var(--color-blue-400); /* Was blue.600 */
+  --ck-color-link-selected-background: color-mix(in oklab, var(--color-blue-800) 20%, transparent); /* Was blue.500 / 0.1 - adjusted */
+  --ck-color-link-fake-selection: color-mix(in oklab, var(--color-blue-800) 40%, transparent); /* Was blue.500 / 0.3 - adjusted */
+  --ck-color-highlight-background: color-mix(in oklab, var(--color-yellow-700) 50%, transparent); /* Was yellow.300 - adjusted */
+  --ck-color-light-red: color-mix(in oklab, var(--color-red-900) 40%, transparent); /* Was red.100 - adjusted */
+  --ck-accessibility-help-dialog-border-color: var(--color-gray-600); /* Was gray.300 */
+  --ck-accessibility-help-dialog-code-background-color: var(--color-gray-800); /* Was gray.100 */
+  --ck-accessibility-help-dialog-kbd-shadow-color: var(--color-gray-400); /* Was gray.500 */
+  --ck-color-color-grid-check-icon: var(--color-blue-300); /* Was blue.600 */
+  --ck-dialog-overlay-background-color: color-mix(in oklab, var(--color-black) 50%, transparent); /* Was black / 0.5 - Often kept same */
+  --ck-dialog-drop-shadow: 0px 0px 6px 2px color-mix(in oklab, var(--color-black) 20%, transparent); /* Was black / 0.15 - adjusted opacity */
+  --ck-color-split-button-hover-background: var(--color-gray-700); /* Was gray.100 */
+  --ck-color-split-button-hover-border: var(--color-gray-600); /* Was gray.400 */
+  --ck-color-editable-blur-selection: var(--color-gray-700); /* Was gray.200 */
+  --ck-color-code-block-label-background: var(--color-gray-600); /* Was gray.500 */
+--ck-html-embed-source-disabled-color: var(--color-gray-500); /* Was gray.500 */
+  --ck-color-image-upload-icon: var(--color-white); /* Was white */
+  --ck-color-image-upload-icon-background: var(--color-green-600); /* Was green.700 */
+  --ck-color-upload-placeholder-loader: var(--color-gray-600); /* Was gray.400 */
+  --ck-evaluation-badge-text-color: var(--color-gray-300); /* Was gray.700 */
+  --ck-evaluation-badge-background: var(--color-gray-800); /* Was white */
+  --ck-color-resizer-tooltip-background: var(--color-gray-200); /* Was gray.900 */
+  --ck-color-resizer-tooltip-text: var(--color-gray-800); /* Was gray.100 */
+  --ck-color-media-embed-placeholder-url-text: var(--color-gray-500); /* Was gray.500 */
+--ck-color-mention-background: color-mix(in oklab, var(--color-pink-500) 20%, transparent); /* Was pink.900 / 0.1 - adjusted */
+  --ck-color-mention-text: var(--color-pink-300); /* Was pink.900 */
+  --ck-color-restricted-editing-exception-background: color-mix(in oklab, var(--color-orange-800) 30%, transparent); /* Was orange.400 / 0.2 - adjusted */
+  --ck-color-restricted-editing-exception-hover-background: color-mix(in oklab, var(--color-orange-800) 45%, transparent); /* Was orange.400 / 0.35 - adjusted */
+  --ck-color-restricted-editing-exception-brackets: color-mix(in oklab, var(--color-orange-400) 50%, transparent); /* Was orange.600 / 0.4 - adjusted */
+  --ck-color-restricted-editing-selected-exception-background: color-mix(in oklab, var(--color-orange-800) 60%, transparent); /* Was orange.400 / 0.5 - adjusted */
+  --ck-color-restricted-editing-selected-exception-brackets: color-mix(in oklab, var(--color-orange-400) 70%, transparent); /* Was orange.600 / 0.6 - adjusted */
+  --ck-style-panel-button-label-background: var(--color-gray-700); /* Was gray.100 */
+  --ck-style-panel-button-hover-label-background: var(--color-gray-600); /* Was gray.100 */
+  --ck-style-panel-button-hover-border-color: var(--color-gray-500); /* Was gray.400 */
+  --ck-color-selector-focused-cell-background: color-mix(in oklab, var(--color-blue-800) 40%, transparent); /* Was blue.300 / 0.3 - adjusted */
+  --ck-table-selected-cell-background: color-mix(in oklab, var(--color-blue-800) 40%, transparent); /* Was blue.300 / 0.3 - adjusted */
+  --ck-color-widget-blurred-border: var(--color-gray-600); /* Was gray.300 */
+  --ck-color-widget-hover-border: var(--color-yellow-500); /* Was yellow.400 */
+  --ck-image-processing-highlight-color: var(--color-gray-700); /* Was gray.50 */
+  --ck-image-processing-background-color: var(--color-gray-800); /* Was gray.200 */
+  --ck-highlight-marker-yellow: var(--color-yellow-700); /* Was yellow.300 */
+  --ck-highlight-marker-green: var(--color-green-700); /* Was green.300 */
+  --ck-highlight-marker-pink: var(--color-pink-700); /* Was pink.300 */
+  --ck-highlight-marker-blue: var(--color-blue-700); /* Was blue.300 */
+  --ck-highlight-pen-red: var(--color-red-400); /* Was red.600 */
+  --ck-highlight-pen-green: var(--color-green-400); /* Was green.700 */
+  --ck-color-image-caption-background: var(--color-gray-800); /* Was gray.100 */
+  --ck-color-image-caption-text: var(--color-gray-200); /* Was gray.800 */
+  --ck-color-image-caption-highlighted-background: color-mix(in oklab, var(--color-yellow-700) 60%, transparent); /* Was yellow.400 - adjusted */
+  --ck-color-minimap-tracker-background: var(--color-gray-400); /* Was gray.500 */
+  --ck-color-minimap-iframe-outline: var(--color-gray-600); /* Was gray.300 */
+  --ck-color-minimap-iframe-shadow: var(--color-black); /* Was black */
+  --ck-color-minimap-progress-background: var(--color-gray-500); /* Was gray.600 */
+  --ck-show-blocks-border-color: var(--color-gray-500); /* Was gray.500 */
+  --ck-color-selector-caption-background: var(--color-gray-800); /* Was gray.100 */
+  --ck-color-selector-caption-text: var(--color-gray-200); /* Was gray.800 */
+  --ck-color-selector-caption-highlighted-background: color-mix(in oklab, var(--color-yellow-700) 60%, transparent); /* Was yellow.400 - adjusted */
+}
+
+.ck-content .table {
+  min-width: 50%;
+}
+.ck-content .table table {
+  border-color: var(--bg6);
+  width: 100%;
+}
+
+.ck-content .table table td, .ck-content .table table th {
+  border-color: var(--bg6);
+}
+
+.arg-ck-editor > div {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.ck .ck-widget.ck-widget_with-selection-handle.ck-widget_selected:hover > .ck-widget__selection-handle{
+  @apply bg-x1;
+}
+
+.arg-ck-editor .ck-editor__main {
+}
+
+.arg-ck-editor .ck-editor__main > div {
+  min-height: 20rem;
+}
+
+.ck.ck-placeholder:before, .ck .ck-placeholder:before {
+  color: var(--bg-reverse) / 40%;
+}
+
+.arg-ck-editor:has(.ck-editor__top) .ck-editor__top .ck-toolbar {
+  opacity: 0.3;
+}
+
+.arg-ck-editor > div:hover .ck-editor__top .ck-toolbar,
+.arg-ck-editor:has(div[contenteditable="true"]):focus-within .ck-editor__top .ck-toolbar {
+  opacity: 1;
+}
+
+.ck.ck-image-insert-form > .ck.ck-button {
+  display: flex;
+}
+
+.ck.ck-image-insert-form > .ck.ck-button:first-child {
+  display: none;
+}
+
+.ck-powered-by-balloon {
+  visibility: hidden;
+}
+
+.arg-ck-editor {
+  a {
+    @apply text-blue-500 hover:text-blue-600 cursor-pointer hover:underline;
+  }
+
+  h1 {
+    @apply text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-xl font-bold;
+  }
+    h4 {
+        @apply text-lg font-bold;
+    }
+    h5 {
+        @apply text-base font-bold;
+    }
+    h6 {
+        @apply text-sm font-bold;
+    }
+
+  hr{
+    @apply bg-transparent border-t border-solid border-x6 h-0 my-3;
+  }
+}
+

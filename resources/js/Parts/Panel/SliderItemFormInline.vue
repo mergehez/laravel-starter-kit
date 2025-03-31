@@ -114,7 +114,7 @@ const iid = props.formState.iid;
                     </div>
 
                     <div
-                        class="text-base px-5 rounded text-center leading-tight"
+                        class="text-base px-5 rounded-sm text-center leading-tight"
                         :style="{
                                     color: formState.form.text_color,
                                     backgroundColor: formState.form.bg_color

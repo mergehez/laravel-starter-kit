@@ -68,10 +68,10 @@ function onCropped(img: any) {
             </div>
 
             <footer class="dialog-footer flex justify-end gap-3 px-5 py-3">
-                <button class="btn btn-light py-0.5 rounded text-sm font-normal lowercase" @click.prevent="state.close()">
+                <button class="btn btn-light py-0.5 rounded-sm text-sm font-normal lowercase" @click.prevent="state.close()">
                     {{ __('cancel') }}
                 </button>
-                <button class="btn btn-primary py-0.5 rounded text-sm font-normal lowercase" type="submit">
+                <button class="btn btn-primary py-0.5 rounded-sm text-sm font-normal lowercase" type="submit">
                     {{ __('upload') }}
                 </button>
             </footer>

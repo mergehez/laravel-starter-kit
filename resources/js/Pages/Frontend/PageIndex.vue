@@ -30,7 +30,7 @@ const currentSlide = ref(0)
                         <img :src="sliderItems[index].image_url" alt="..." class="w-full h-full">
                         <div class="absolute inset-0 flex flex-col justify-end items-center pb-10 px-3 gap-1">
                             <div
-                                class="text-2xl px-5 rounded text-center leading-tight"
+                                class="text-2xl px-5 rounded-sm text-center leading-tight"
                                 :style="{
                                     color: sliderItems[index].text_color,
                                     backgroundColor: sliderItems[index].bg_color
@@ -38,7 +38,7 @@ const currentSlide = ref(0)
                                 {{ __(sliderItems[index].title) }}
                             </div>
                             <div
-                                class="text-base px-2 rounded text-center leading-tight"
+                                class="text-base px-2 rounded-sm text-center leading-tight"
                                 :style="{
                                     color: sliderItems[index].text_color,
                                     backgroundColor: sliderItems[index].bg_color
