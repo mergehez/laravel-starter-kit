@@ -215,7 +215,7 @@ function getText(opt: TOpt): any {
                        ref="refInput" :id="id"
                        :placeholder="selection.length ? '' : placeholder"
                        autocomplete="off"
-                       class="ml-1 w-full border-0 bg-transparent text-sm focus:!border-0 focus:!outline-none focus:!ring-0 py-1 px-0">
+                       class="ml-1 w-full border-0 bg-transparent text-sm focus:!border-0 focus:!outline-hidden focus:!ring-0 py-1 px-0">
 
                 <div v-show="focused" class="fixed bg-card-visible z-30 w-full rounded-b-md font-medium"
                      :style="{
@@ -227,7 +227,7 @@ function getText(opt: TOpt): any {
                                ref="refInput" :id="id"
                                :placeholder="placeholder ?? __('search')"
                                autocomplete="off"
-                               class="border border-x5 bg-x3 text-sm focus:border-x6 focus:ring-0 focus:outline-none py-1 px-2 w-full">
+                               class="border border-x5 bg-x3 text-sm focus:border-x6 focus:ring-0 focus:outline-hidden py-1 px-2 w-full">
                         <i class="icon icon-mingcute--search-line opacity-80 right-2 text-lg absolute pointer-events-none select-none"></i>
                     </div>
                     <div ref="refFilters" class="border border-light max-h-[500px] overflow-y-auto">

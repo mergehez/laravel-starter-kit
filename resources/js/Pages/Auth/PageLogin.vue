@@ -6,6 +6,7 @@ import InputError from "@/Components/Form/InputError.vue";
 import TextInput from "@/Components/Form/TextInput.vue";
 import {__} from "@/utils/localization";
 import {api} from "@/utils/api_helpers";
+import Button from "@/Components/Button.vue";
 
 const props = defineProps<{
     redirect_url?: string
@@ -61,7 +62,13 @@ const onSubmit = () => {
                 required/>
             <InputError :message="form.errors.email"/>
 
-            <button type="submit" class="mt-3 w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+            <Button
+                type="submit"
+                severity="primary"
+                class="mt-3 py-2"
+            >
+                Login to your account
+            </Button>
 
             <div class="text-center pt-4 flex flex-col gap-4">
                 <!--<button @click="onLostPassword()" type="button" class="text-sm text-blue-700 hover:underline dark:text-blue-500">Lost password?</button>-->

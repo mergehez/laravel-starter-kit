@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@plugin "../../tailwind-iconify4";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root{
+    --bg-reverse: rgb(18 18 18);
+    /*--bg0: 255 255 255;*/
+    /*--bg1: 250 250 250;*/
+    /*--bg2: 242 242 242;*/
+    /*--bg3: 235 235 235;*/
+    /*--bg4: 228 228 228;*/
+    /*--bg5: 221 221 221;*/
+    /*--bg6: 214 214 214;*/
+    /*--bg7: 207 207 207;*/
+    /*--bg8: 200 200 200;*/
+
+    /*--clr-default: 0 0 0;*/
+    --clr-default: rgb(58 58 58);
+
+    /*claude*/
+    --bg0: rgb(255 255 255);
+    --bg1: rgb(248 249 250);
+    --bg2: rgb(241 243 245);
+    --bg3: rgb(233 236 240);
+    --bg4: rgb(225 229 235);
+    --bg5: rgb(216 222 230);
+    --bg6: rgb(207 214 224);
+    --bg7: rgb(197 206 218);
+    --bg8: rgb(187 198 212);
+
+    /*chatgpt*/
+    /*--bg0: 255 255 255; // Pure white*/
+    /*--bg1: 242 243 245;*/
+    /*--bg2: 229 231 235;*/
+    /*--bg3: 216 218 225;*/
+    /*--bg4: 203 206 215;*/
+    /*--bg5: 190 194 205;*/
+    /*--bg6: 177 182 195;*/
+    /*--bg7: 164 170 185;*/
+    /*--bg8: 152 158 175; // Soft gray*/
+
+    /*grok*/
+    /*--bg0: 255 255 255; // Pure white*/
+    /*--bg1: 248 249 249; // Near-white*/
+    /*--bg2: 241 243 244; // Lightest gray*/
+    /*--bg3: 234 236 238; // Soft light gray*/
+    /*--bg4: 228 230 233; // Mid-light gray*/
+    /*--bg5: 221 224 227; // Slightly deeper gray*/
+    /*--bg6: 214 218 221; // Subtle gray*/
+    /*--bg7: 207 211 216; // Pale gray-blue*/
+    /*--bg8: 200 205 210; // Light muted gray-blue*/
+}
+.dark{
+    --bg-reverse: rgb(255 255 255);
+
+    /*--clr-default: 222 222 222;*/
+    --clr-default: rgb(204 204 204);
+
+    /*--bg0: 3 7 18;      !* bg-gray-950 *!*/
+    /*--bg1: 8 15 26;*/
+    /*--bg2: 12 21 29;*/
+    /*--bg3: 20 30 40;*/
+    /*--bg4: 27 37 47;*/
+    /*--bg5: 34 44 54;*/
+    /*--bg6: 40 50 60;*/
+    /*--bg7: 46 56 66;*/
+    /*--bg8: 52 62 72;*/
+
+    /* chatgpt */
+    /*--bg0: 3 7 18;*/
+    /*--bg1: 10 15 25;*/
+    /*--bg2: 17 22 32;*/
+    /*--bg3: 24 29 39;*/
+    /*--bg4: 30 36 46;*/
+    /*--bg5: 36 43 52;*/
+    /*--bg6: 42 50 58;*/
+    /*--bg7: 47 56 65;*/
+    /*--bg8: 52 62 72;*/
+
+    /*claude*/
+    --bg0: rgb(3 7 18);
+    --bg1: rgb(9 14 26);
+    --bg2: rgb(15 21 34);
+    --bg3: rgb(22 28 41);
+    --bg4: rgb(28 35 49);
+    --bg5: rgb(34 42 57);
+    --bg6: rgb(40 49 64);
+    --bg7: rgb(46 55 68);
+    --bg8: rgb(52 62 72);
+
+    /* grok */
+    /*--bg0: 3 7 18;*/
+    /*--bg1: 9 14 25;*/
+    /*--bg2: 15 21 32;*/
+    /*--bg3: 21 28 39;*/
+    /*--bg4: 27 35 46;*/
+    /*--bg5: 33 42 53;*/
+    /*--bg6: 39 49 60;*/
+    /*--bg7: 45 56 67;*/
+    /*--bg8: 52 62 72;*/
+}
+@theme {
+    --breakpoint-xs: 475px;
+    --breakpoint-laptop: 992px;
+
+    --color-x0: var(--bg0);
+    --color-x1: var(--bg1);
+    --color-x2: var(--bg2);
+    --color-x3: var(--bg3);
+    --color-x4: var(--bg4);
+    --color-x5: var(--bg5);
+    --color-x6: var(--bg6);
+    --color-x7: var(--bg7);
+    --color-x8: var(--bg8);
+    --color-reverse: var(--bg-reverse);
+    --color-default: var(--clr-default);
+}

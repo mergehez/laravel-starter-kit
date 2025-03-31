@@ -593,6 +593,8 @@ function loadIconSet(source) {
  */
 function getDynamicCSSRules(icon, options = {}) {
     const nameParts = icon.split(/--|:/);
+    if(icon.includes(';&$45;'))
+      return undefined;
     if (nameParts.length !== 2) {
         throw new Error(`Invalid icon name: "${icon}"`);
     }

@@ -93,7 +93,7 @@ function navigate(e: KeyboardEvent) {
     <div v-else class="font-bold text-center pl-2 text-indigo-400 pt-3 py-2">
         {{ __('no_recent_searches') }}
     </div>
-    <div v-if="state.resultsToShow.length" class="bg-x2 rounded overflow-y-auto text-sm md:text-base border-t border-l border-x4">
+    <div v-if="state.resultsToShow.length" class="bg-x2 rounded-sm overflow-y-auto text-sm md:text-base border-t border-l border-x4">
         <button v-for="(res, i) in state.resultsToShow"
                 class="list-group-item text-left gap-1 relative px-3 border-b border-r border-x4 hover:bg-gray-200/70 dark:hover:bg-gray-700/70 cursor-pointer"
                 :class="[{ 'bg-indigo-200 dark:bg-indigo-800': state.selectedRow == i}]"

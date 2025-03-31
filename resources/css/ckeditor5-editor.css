@@ -5,7 +5,7 @@
     /*--ck-color-base-action: #53a336; !* green-700 *!*/
     /*--ck-color-base-focus: #6cb5f9; !* blue-400 *!*/
     /*!*--ck-color-base-text: #333333; !* gray-800 *!*!*/
-    /*--ck-color-base-text: theme(colors.red.200); !* gray-800 *!*/
+    /*--ck-color-base-text: var(--color-red-200); !* gray-800 *!*/
     /*--ck-color-base-active: #2977ff; !* blue-500 *!*/
     /*--ck-color-base-active-focus: #0d65ff; !* blue-600 *!*/
     /*--ck-color-base-error: #db3700; !* red-600 *!*/
@@ -13,7 +13,7 @@
     /*--ck-color-focus-border-coordinates: 218, 81.8%, 56.9%;*/
     /*--ck-color-focus-border: hsl(var(--ck-color-focus-border-coordinates)); !* blue-500 *!*/
     /*--ck-color-focus-outer-shadow: #cae1fc; !* blue-100 *!*/
-    /*--ck-color-focus-outer-shadow: theme(colors.blue.200); !* blue-100 *!*/
+    /*--ck-color-focus-outer-shadow: var(--color-blue-200); !* blue-100 *!*/
     /*--ck-color-focus-disabled-shadow: rgba(119, 186, 248, 0.3); !* blue-300 with opacity *!*/
     /*--ck-color-focus-error-shadow: rgba(255, 64, 31, 0.3); !* red-500 with opacity *!*/
     /*--ck-color-text: var(--ck-color-base-text); !* gray-800 *!*/

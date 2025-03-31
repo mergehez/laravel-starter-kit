@@ -1,4 +1,4 @@
-import '../css/app.scss';
+import '../css/app.css';
 
 import axios from 'axios';
 import {createApp, h} from 'vue';

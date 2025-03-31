@@ -85,10 +85,10 @@ function selectAndClose(file?: IM.SelectFileResponse) {
         </div>
 
         <footer class="dialog-footer flex justify-end gap-3 px-0 py-3 ">
-            <button class="btn btn-light py-0.5 rounded text-base font-normal lowercase" @click.prevent="visible = false">
+            <button class="btn btn-light py-0.5 rounded-sm text-base font-normal lowercase" @click.prevent="visible = false">
                 Cancel
             </button>
-            <button class="btn btn-primary py-0.5 rounded text-base font-normal lowercase" @click.prevent="() => selectAndClose()">
+            <button class="btn btn-primary py-0.5 rounded-sm text-base font-normal lowercase" @click.prevent="() => selectAndClose()">
                 Select
             </button>
         </footer>

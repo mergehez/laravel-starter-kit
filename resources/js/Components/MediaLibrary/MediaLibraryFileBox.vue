@@ -39,7 +39,7 @@ function select(){
 
 <template>
     <div class="flex justify-center">
-        <div class="relative group border border-x4 shadow shadow-x4 img-thumbnail cursor-pointer overflow-hidden border-base"
+        <div class="relative group border border-x4 shadow-sm shadow-x4 img-thumbnail cursor-pointer overflow-hidden border-base"
              :class="isSelection ? 'border-2 border-green-500 dark:border-green-800' : ''"
              :style="`width: min(100%, 150px); aspect-ratio: ${state.config.baseSize.aspectRatio};`"
              @click.prevent.stop="select"
@@ -64,7 +64,7 @@ function select(){
                 class="btn btn-sm btn-success text-white p-1 absolute top-0 left-0 m-1 show">
                 <svg height="12px" width="12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" d="M77.248 415.04a64 64 0 0 1 90.496 0l226.304 226.304L846.528 188.8a64 64 0 1 1 90.56 90.496l-543.04 543.04-316.8-316.8a64 64 0 0 1 0-90.496z"></path></svg>
             </div>
-            <div class="show bg-x0 border border-x3 absolute bottom-0 left-0 right-0 m-1 dark:text-white rounded text-center" style=" font-size:0.8em">
+            <div class="show bg-x0 border border-x3 absolute bottom-0 left-0 right-0 m-1 dark:text-white rounded-sm text-center" style=" font-size:0.8em">
                 {{f.name}}
             </div>
         </div>

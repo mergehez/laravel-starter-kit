@@ -240,7 +240,7 @@ function triggerFileInput() {
                             :key="subDir.directory"
                         >
                             <div class="flex justify-center">
-                                <div class="relative group border border-x4 shadow shadow-x4 img-thumbnail cursor-pointer overflow-hidden border-base"
+                                <div class="relative group border border-x4 shadow-sm shadow-x4 img-thumbnail cursor-pointer overflow-hidden border-base"
                                      :style="`width: min(100%, 150px); aspect-ratio: ${state.config.baseSize.aspectRatio};`"
                                      @click.prevent="state.changeActiveDirectory(subDir)"
                                 >

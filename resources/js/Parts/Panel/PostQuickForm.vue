@@ -40,7 +40,7 @@ function submit() {
                         v-model="formState.form.slug"
                         :disabled="slugLocked"
                         required
-                        class="flex-1 rounded-sm !bg-x1"
+                        class="flex-1 rounded-xs !bg-x1"
                         :class="slugLocked ? 'border-x1' : ''"
                     />
                     <button

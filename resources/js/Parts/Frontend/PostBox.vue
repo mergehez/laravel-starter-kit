@@ -25,8 +25,8 @@ function visitPost() {
          <!--style="border: 1px solid rgb(0 0 0 / 0%)"-->
         <h2 class="text-2xl uppercase font-bold">
             <Link :href="route('page.post', post.slug)" :preserveScroll="false"
-                   class="hover:text-opacity-80"
-                   :class="minimal ? 'text-red-600 hover:text-opacity-80' : 'text-black hover:text-opacity-70'">
+                   class="hover:opacity-80"
+                   :class="minimal ? 'text-red-600 hover:opacity-80' : 'text-black hover:opacity-70'">
                 {{ __(post.title) }}
             </Link>
         </h2>
