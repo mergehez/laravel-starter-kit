@@ -8,6 +8,7 @@
     "devDependencies": {
         "@fontsource/roboto": "^5.2.5",
         "@iconify/json": "^2.2.322",
+        "@iconify/tailwind4": "^1.0.6",
         "@inertiajs/vue3": "^2.0.5",
         "@tailwindcss/vite": "^4.0.17",
         "@types/node": "^22.13.14",
